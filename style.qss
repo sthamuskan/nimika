@@ -1,0 +1,149 @@
+/* General Styles */
+QMainWindow {
+    background-color: #F8F8F8; /* Very light gray/almost white background */
+    color: #333333; /* Dark text */
+    font-family: "Segoe UI", "Helvetica Neue", sans-serif; /* Modern font */
+}
+
+QWidget#centralwidget {
+    background-color: #FFFFFF; /* Pure white for main content area */
+}
+
+/* Top Header Widget */
+QWidget#widget { /* This is your top header widget */
+    background-color: #FFFFFF; /* White background for header */
+    border-bottom: 1px solid #E0E0E0; /* Light gray border */
+    padding: 5px;
+}
+
+/* Sidebar Widgets */
+QWidget#icon_only_widget, QWidget#full_mwnu_widget {
+    background-color: #F0F0F0; /* Light gray sidebar background */
+    border-right: 1px solid #E0E0E0; /* Light gray border */
+}
+
+/* Logo Labels */
+QLabel#label, QLabel#label_2 { /* Icon-only and full menu logo */
+    background-color: transparent;
+    margin: 5px;
+}
+
+QLabel#label_3 { /* "Slidebar" text label */
+    color: #333333; /* Dark text color */
+    font-weight: bold;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+/* Sidebar Buttons (shared styles for both icon-only and full menu) */
+QPushButton {
+    background-color: transparent;
+    border: none;
+    color: #333333; /* Dark text color */
+    text-align: left;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px; /* Subtle rounded corners */
+    min-height: 30px; /* Ensure consistent button height */
+}
+
+QPushButton:hover {
+    background-color: #E6E6E6; /* Slightly darker light gray on hover */
+}
+
+QPushButton:checked {
+    background-color: #DDEEFF; /* Very light blue for checked state */
+    color: #0056B3; /* Dark blue text for checked */
+    font-weight: bold;
+    border-left: 3px solid #007BFF; /* Bright blue accent line on left for active */
+}
+
+/* Specifically for icon-only buttons (no text) */
+QPushButton#home_btn_1, QPushButton#flash_btn_1,
+QPushButton#quizze_btn_1, QPushButton#about_btn_1,
+QPushButton#setting_1, QPushButton#logout_btn_1 {
+    padding: 10px; /* Adjust padding for icon-only buttons */
+    text-align: center; /* Center the icon */
+}
+
+QPushButton#home_btn_1:checked, QPushButton#flash_btn_1:checked,
+QPushButton#quizze_btn_1:checked, QPushButton#about_btn_1:checked,
+QPushButton#setting_1:checked, QPushButton#logout_btn_1:checked {
+    border-left: none; /* Remove left border for icon-only checked */
+    border-radius: 5px; /* Maintain rounded corners */
+    background-color: #DDEEFF; /* Keep light blue accent color */
+}
+
+/* User and Menu Toggle Buttons in Header */
+QPushButton#change_btn, QPushButton#user_btn {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    border-radius: 50%; /* Make them circular */
+    min-width: 35px; /* Ensure circular shape */
+    min-height: 35px; /* Ensure circular shape */
+}
+
+QPushButton#change_btn:hover, QPushButton#user_btn:hover, QPushButton#search_btn:hover {
+    background-color: #E6E6E6; /* Light gray on hover */
+}
+
+/* Search Input Field */
+QLineEdit#search_input {
+    background-color: #F8F8F8; /* Very light gray for input background */
+    border: 1px solid #CCCCCC; /* Light gray border */
+    border-radius: 15px; /* More rounded corners */
+    padding: 5px 10px;
+    color: #333333; /* Dark text color */
+    selection-background-color: #ADD8E6; /* Light blue selection */
+    min-width: 150px;
+    max-width: 250px; /* Limit width */
+}
+
+QLineEdit#search_input:focus {
+    border: 2px solid #007BFF; /* Bright blue on focus */
+}
+
+/* Search Button (now more subtle to fit light theme) */
+QPushButton#search_btn {
+    background-color: #E0E0E0; /* Light gray for search button */
+    border: none;
+    border-radius: 15px; /* Match input field */
+    padding: 5px 10px;
+    margin-left: -20px; /* Overlap with input for integrated look */
+    icon-size: 18px; /* Adjust icon size if needed */
+    min-width: 30px; /* Ensure button size */
+    min-height: 30px; /* Ensure button size */
+}
+QPushButton#search_btn:hover {
+    background-color: #D0D0D0; /* Slightly darker gray on hover */
+}
+
+/* Stacked Widget Pages (Labels for now) */
+QLabel {
+    color: #333333; /* Dark text for page content */
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+/* ScrollBars (Optional, for a unified look if you have scrollable areas) */
+QScrollBar:vertical, QScrollBar:horizontal {
+    border: none;
+    background: #E0E0E0;
+    width: 10px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:vertical, QScrollBar::handle:horizontal {
+    background: #CCCCCC;
+    min-height: 20px;
+    border-radius: 5px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical,
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    border: none;
+    background: none;
+}
